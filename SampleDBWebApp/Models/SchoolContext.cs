@@ -13,6 +13,10 @@ namespace SampleDBWebApp.Models
         {
             Database.SetInitializer<SchoolContext>(new SchoolContextInitializer());
         }
+        
+        public SchoolContext() :
+            base ("DatabaseConnection")
+        { }
 
         public DbSet<Student> Students { get; set; }
     }
